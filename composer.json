@@ -1,0 +1,43 @@
+{
+    "name": "phprtc/console",
+    "description": "PHP RTC console library",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ahmard",
+            "email": "ahmardy@outlook.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "symfony/console": "^6.0"
+    },
+    "autoload": {
+        "files": ["src/functions.php"],
+        "psr-4": {
+            "RTC\\Console\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "RTC\\Console\\Tests\\": "tests/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://phprtc.repo.repman.io"
+        }
+    ],
+    "scripts": {
+        "analyse": "phpstan analyse",
+        "test": "phpunit"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.4",
+        "phpunit/phpunit": "^9.5",
+        "openswoole/ide-helper": "^4.10",
+        "jetbrains/phpstorm-attributes": "^1.0"
+    }
+}
